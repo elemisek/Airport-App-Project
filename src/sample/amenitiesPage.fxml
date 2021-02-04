@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderPane" prefHeight="970.0" prefWidth="1390.0" style="-fx-background-color: #1a2d47;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.271" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AmenitiesController">
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane fx:id="restauracjeBorderPane" visible="false">
+               <top>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Restauracje" textAlignment="CENTER" textFill="#ebe7dd">
+                           <font>
+                              <Font size="72.0" />
+                           </font>
+                           <padding>
+                              <Insets left="450.0" top="70.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" x="850.0" y="50.0">
+                           <image>
+                              <Image url="@assets/pizza.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#handleReturnButton" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7" style="-fx-cursor: HAND;" x="30.0" y="20.0">
+                           <image>
+                              <Image url="@assets/return.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Pane>
+               </top>
+               <center>
+                  <ListView fx:id="restauracjeListView" prefHeight="610.0" prefWidth="1250.0" style="-fx-background-color: #1a2d47;" stylesheets="@style.css" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="100.0" left="70.0" right="70.0" top="50.0" />
+                     </BorderPane.margin>
+                  </ListView>
+               </center>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </BorderPane>
+            <BorderPane fx:id="loungeBorderPane" visible="false">
+               <top>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" x="770.0" y="50.0">
+                           <image>
+                              <Image url="@assets/lounge.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Lounge" textAlignment="CENTER" textFill="#ebe7dd">
+                           <font>
+                              <Font size="72.0" />
+                           </font>
+                           <padding>
+                              <Insets left="500.0" top="70.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#handleReturnButton" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7" style="-fx-cursor: HAND;" x="30.0" y="20.0">
+                           <image>
+                              <Image url="@assets/return.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Pane>
+               </top>
+               <center>
+                  <ListView fx:id="loungeListView" prefHeight="610.0" prefWidth="1250.0" style="-fx-background-color: #1a2d47;" stylesheets="@style.css" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="100.0" left="70.0" right="70.0" top="50.0" />
+                     </BorderPane.margin>
+                  </ListView>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="sklepyBorderPane" visible="false">
+               <top>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" x="750.0" y="50.0">
+                           <image>
+                              <Image url="@assets/groceries.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Sklepy" textAlignment="CENTER" textFill="#ebe7dd">
+                           <font>
+                              <Font size="72.0" />
+                           </font>
+                           <padding>
+                              <Insets left="500.0" top="70.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#handleReturnButton" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7" style="-fx-cursor: HAND;" x="30.0" y="20.0">
+                           <image>
+                              <Image url="@assets/return.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Pane>
+               </top>
+               <center>
+                  <VBox prefHeight="770.0" prefWidth="1390.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="1390.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleWszystkoMouseClick" style="-fx-cursor: HAND; -fx-border-color: #31527a; -fx-border-width: 3; -fx-border-radius: 5;" text="Wszystko" textAlignment="CENTER" textFill="#ebe7dd">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="3.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleSpozywczeMouseClick" style="-fx-cursor: HAND; -fx-border-color: #31527a; -fx-border-width: 3; -fx-border-radius: 5;" text="Art. spożywcze" textAlignment="CENTER" textFill="#ebe7dd">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="3.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handlePodrozneMouseClick" style="-fx-cursor: HAND; -fx-border-color: #31527a; -fx-border-width: 3; -fx-border-radius: 5;" text="Akcesoria podróżne" textAlignment="CENTER" textFill="#ebe7dd">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="3.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button layoutX="756.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleBizuteriaMouseClick" style="-fx-cursor: HAND; -fx-border-color: #31527a; -fx-border-width: 3; -fx-border-radius: 5;" text="Biżuteria" textAlignment="CENTER" textFill="#ebe7dd">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="TOP_CENTER" prefHeight="50.0" prefWidth="1390.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#handleAlkoholeMouseClick" style="-fx-cursor: HAND; -fx-border-color: #31527a; -fx-border-width: 3; -fx-border-radius: 5;" text="Alkohole" textAlignment="CENTER" textFill="#ebe7dd">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="3.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleDlaDzieciMouseClick" style="-fx-cursor: HAND; -fx-border-color: #31527a; -fx-border-width: 3; -fx-border-radius: 5;" text="Dla dzieci" textAlignment="CENTER" textFill="#ebe7dd">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="3.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#handleKosmetykiMouseClick" style="-fx-cursor: HAND; -fx-border-color: #31527a; -fx-border-width: 3; -fx-border-radius: 5;" text="Kosmetyki" textAlignment="CENTER" textFill="#ebe7dd">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="3.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button layoutX="756.0" layoutY="10.0" mnemonicParsing="false" onAction="#handlePrasaMouseClick" style="-fx-cursor: HAND; -fx-border-color: #31527a; -fx-border-width: 3; -fx-border-radius: 5;" text="Prasa" textAlignment="CENTER" textFill="#ebe7dd">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="3.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button layoutX="899.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleKsiazkiMuzykaMouseClick" style="-fx-cursor: HAND; -fx-border-color: #31527a; -fx-border-width: 3; -fx-border-radius: 5;" text="Książki i muzyka" textAlignment="CENTER" textFill="#ebe7dd">
+                                 <font>
+                                    <Font size="28.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="3.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="3.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <ListView fx:id="sklepyListView" prefHeight="600.0" prefWidth="1250.0" style="-fx-background-color: #1a2d47;" stylesheets="@style.css">
+                           <VBox.margin>
+                              <Insets bottom="40.0" left="5.0" right="5.0" top="30.0" />
+                           </VBox.margin>
+                        </ListView>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="autobusyBorderPane" visible="false">
+               <top>
+                  <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" x="800.0" y="50.0">
+                           <image>
+                              <Image url="@assets/bus.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Autobusy" textAlignment="CENTER" textFill="#ebe7dd">
+                           <font>
+                              <Font size="72.0" />
+                           </font>
+                           <padding>
+                              <Insets left="450.0" top="70.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#handleReturnButton" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7" style="-fx-cursor: HAND;" x="30.0" y="20.0">
+                           <image>
+                              <Image url="@assets/return.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Pane>
+               </top>
+               <center>
+                  <ListView fx:id="autobusyListView" prefHeight="610.0" prefWidth="1250.0" style="-fx-background-color: #1a2d47;" stylesheets="@style.css" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="100.0" left="70.0" right="70.0" top="50.0" />
+                     </BorderPane.margin>
+                  </ListView>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="pociagiBorderPane" visible="false">
+               <top>
+                  <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="1.2" scaleY="1.2" x="770.0" y="50.0">
+                           <image>
+                              <Image url="@assets/train.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Pociągi" textAlignment="CENTER" textFill="#ebe7dd">
+                           <font>
+                              <Font size="72.0" />
+                           </font>
+                           <padding>
+                              <Insets left="500.0" top="70.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#handleReturnButton" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7" style="-fx-cursor: HAND;" x="30.0" y="20.0">
+                           <image>
+                              <Image url="@assets/return.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Pane>
+               </top>
+               <center>
+                  <ListView fx:id="pociagiListView" prefHeight="610.0" prefWidth="1250.0" style="-fx-background-color: #1a2d47;" stylesheets="@style.css" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets bottom="100.0" left="70.0" right="70.0" top="50.0" />
+                     </BorderPane.margin>
+                  </ListView>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="przylotyBorderPane" visible="false">
+               <top>
+                  <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" rotate="15.0" scaleX="1.2" scaleY="1.2" x="800.0" y="50.0">
+                           <image>
+                              <Image url="@assets/airplane.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Przyloty" textAlignment="CENTER" textFill="#ebe7dd">
+                           <font>
+                              <Font size="72.0" />
+                           </font>
+                           <padding>
+                              <Insets left="500.0" top="70.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#handleReturnButton" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7" style="-fx-cursor: HAND;" x="30.0" y="20.0">
+                           <image>
+                              <Image url="@assets/return.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Pane>
+               </top>
+               <center>
+                  <TableView fx:id="przylotyTableView" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #1a2d47;" stylesheets="@style.css">
+                     <BorderPane.margin>
+                        <Insets bottom="40.0" left="100.0" />
+                     </BorderPane.margin>
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                  </TableView>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="odlotyBorderPane" visible="false">
+               <top>
+                  <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" rotate="-30.0" scaleX="1.2" scaleY="1.2" x="800.0" y="30.0">
+                           <image>
+                              <Image url="@assets/airplane.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Odloty" textAlignment="CENTER" textFill="#ebe7dd">
+                           <font>
+                              <Font size="72.0" />
+                           </font>
+                           <padding>
+                              <Insets left="520.0" top="70.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#handleReturnButton" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7" style="-fx-cursor: HAND;" x="30.0" y="20.0">
+                           <image>
+                              <Image url="@assets/return.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Pane>
+               </top>
+               <center>
+                  <TableView fx:id="odlotyTableView" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #1a2d47;">
+                     <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                     </columnResizePolicy>
+                     <BorderPane.margin>
+                        <Insets bottom="40.0" left="100.0" />
+                     </BorderPane.margin>
+                  </TableView>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="szukajBorderPane" visible="false">
+               <top>
+                  <Pane prefHeight="250.0" prefWidth="1390.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8" translateY="10.0" x="840.0" y="30.0">
+                           <image>
+                              <Image url="@assets/search.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="Sprawdź lot" textAlignment="CENTER" textFill="#ebe7dd">
+                           <font>
+                              <Font size="72.0" />
+                           </font>
+                           <padding>
+                              <Insets left="450.0" top="70.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#handleReturnButton" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7" style="-fx-cursor: HAND;" x="30.0" y="20.0">
+                           <image>
+                              <Image url="@assets/return.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Pane>
+               </top>
+               <center>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="idLotu" alignment="CENTER" promptText="numer lotu, np. KL1362" style="-fx-background-radius: 10;">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="30.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#handleSearch" pickOnBounds="true" preserveRatio="true" scaleX="0.6" scaleY="0.6" style="-fx-cursor: HAND;">
+                                 <image>
+                                    <Image url="@assets/search.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Text fx:id="szukanyLot" fill="#ebe7dd" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: left;" text="Podaj numer lotu, np. KL1362 i naciśnij lupkę." textAlignment="CENTER">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Text>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+            <BorderPane fx:id="opinieBorderPane">
+               <top>
+                  <Pane prefHeight="220.0" prefWidth="1390.0">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8" translateY="15.0" x="810.0" y="30.0">
+                           <image>
+                              <Image url="@assets/plus.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" contentDisplay="CENTER" graphicTextGap="2.0" text="Dodaj opinię&#10;o lotnisku" textAlignment="CENTER" textFill="#ebe7dd">
+                           <font>
+                              <Font size="56.0" />
+                           </font>
+                           <padding>
+                              <Insets left="480.0" top="40.0" />
+                           </padding>
+                        </Label>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#handleReturnButton" pickOnBounds="true" preserveRatio="true" scaleX="0.7" scaleY="0.7" style="-fx-cursor: HAND;" x="30.0" y="20.0">
+                           <image>
+                              <Image url="@assets/return.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin>
+                  </Pane>
+               </top>
+               <center>
+                  <VBox alignment="TOP_CENTER" prefHeight="750.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Text fx:id="opiniaLotniskoLabel" fill="#ebe7dd" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-text-alignment: left;" text="Dodajesz opinię o: " textAlignment="CENTER">
+                           <font>
+                              <Font size="36.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Text>
+                        <HBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="500.0">
+                           <children>
+                              <TextArea fx:id="opinieTextArea" prefHeight="100.0" prefWidth="1000.0" style="-fx-border-radius: 20;" wrapText="true">
+                                 <font>
+                                    <Font size="36.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </TextArea>
+                              <ImageView fitHeight="150.0" fitWidth="200.0" onMouseClicked="#handleDodajOpinieMouseClick" pickOnBounds="true" preserveRatio="true" scaleX="0.8" scaleY="0.8" style="-fx-cursor: HAND;" translateX="10.0">
+                                 <image>
+                                    <Image url="@assets/plus.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="20.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <ListView fx:id="opinieListView" prefHeight="600.0" prefWidth="1250.0" style="-fx-background-color: #1a2d47;" stylesheets="@style.css">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="120.0" right="120.0" top="10.0" />
+                           </VBox.margin>
+                        </ListView>
+                     </children>
+                  </VBox>
+               </center>
+            </BorderPane>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>

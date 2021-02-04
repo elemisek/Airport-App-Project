@@ -1,0 +1,129 @@
+.button
+{
+    -fx-background-color: #1a2d47;
+}
+
+.button:hover
+{
+    -fx-background-color: #31527a;
+}
+
+.button:pressed
+{
+    -fx-background-color: #244060;
+}
+
+.list-cell
+{
+    -fx-background-color: #1a2d47;
+    -fx-alignment: center;
+    -fx-font-size: 24;
+    -fx-text-fill: #dbdad7;
+    -fx-text-alignment: center;
+    -fx-background-radius: 10;
+    -fx-graphic-text-gap: 20;
+    -fx-padding: 10;
+}
+
+.list-cell:empty
+{
+    visibility:hidden;
+}
+
+.list-cell:hover
+{
+    -fx-background-color: #31527a;
+}
+
+.list-cell:pressed
+{
+    -fx-background-color: #244060;
+}
+
+.table-view .column-header
+{
+    -fx-background-color: #21385a;
+    -fx-text-background-color: #dbdad7;
+    -fx-font-size: 20;
+    -fx-border-color: transparent;
+}
+
+.table-view .column-header-background .filler
+{
+    -fx-background-color: #1a2d47;
+    -fx-text-fill: #dbdad7;
+}
+
+.table-view .table-cell
+{
+    -fx-font-size: 18;
+    -fx-background-color: #244060;
+    -fx-text-fill: #dbdad7;
+    -fx-border-color: transparent;
+}
+
+.table-view .table-cell:hover
+{
+    -fx-background-color: #37597e;
+}
+
+.table-view .corner
+{
+    -fx-background-color: transparent;
+}
+
+.scroll-bar:vertical .track,
+.scroll-bar:horizontal .track
+{
+    -fx-background-color: #1a2d47;
+    -fx-border: none;
+    -fx-background-radius : 0.0em;
+    -fx-border-radius :2.0em;
+}
+
+.scroll-bar:vertical .increment-button,
+.scroll-bar:horizontal .increment-button,
+.scroll-bar:vertical .decrement-button,
+.scroll-bar:horizontal .decrement-button
+{
+    -fx-background-radius : 0.0em;
+    -fx-padding: 0.0 25.0 0.0 0.0;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow{
+    -fx-shape : "";
+    -fx-padding: 0;
+}
+
+.scroll-bar:vertical .increment-arrow,
+.scroll-bar:horizontal .increment-arrow,
+.scroll-bar:vertical .decrement-arrow,
+.scroll-bar:horizontal .decrement-arrow
+{
+    -fx-shape : "";
+    -fx-background-color :#1a2d47;
+}
+
+.scroll-bar:vertical .corner,
+.scroll-bar:horizontal .corner
+{
+    -fx-background-color :transparent;
+}
+
+.scroll-bar:vertical .thumb,
+.scroll-bar:horizontal .thumb
+{
+    -fx-background-color :#31527a;
+    -fx-background-radius : 2.0em;
+}
+
+.scroll-bar:vertical .thumb:hover,
+.scroll-bar:horizontal .thumb:hover
+{
+    -fx-background-color :#ebe7dd;
+    -fx-background-radius : 2.0em;
+}
+
+
+

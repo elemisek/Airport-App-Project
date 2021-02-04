@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="970.0" prefWidth="1390.0" style="-fx-background-color: #1a2d47;" styleClass="listView" xmlns="http://javafx.com/javafx/8.0.271" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainPageController">
+   <center>
+      <ListView fx:id="list" onMouseClicked="#handleMouseClick" prefWidth="200.0" style="-fx-background-color: #1a2d47; -fx-cursor: HAND;" stylesheets="@style.css" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="50.0" left="200.0" right="200.0" top="40.0" />
+         </BorderPane.margin>
+      </ListView>
+   </center>
+   <bottom>
+      <Text fill="#ebe7dd" strokeType="OUTSIDE" strokeWidth="0.0" text="Autor: Tomasz Kasprzak. Wykorzystano ikony z serwisu www.flaticon.com." BorderPane.alignment="CENTER">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </BorderPane.margin>
+      </Text>
+   </bottom>
+   <top>
+      <ImageView fitHeight="700.0" fitWidth="700.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@assets/lotnisko2.png" />
+         </image>
+         <BorderPane.margin>
+            <Insets top="100.0" />
+         </BorderPane.margin>
+      </ImageView>
+   </top>
+</BorderPane>
